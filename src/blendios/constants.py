@@ -1,0 +1,41 @@
+"""Global constants for BlendiOS."""
+
+from pathlib import Path
+
+DEFAULT_APP_NAME = "BlendiOS"
+DEFAULT_VERSION = "0.1.0"
+
+# Paths
+DEFAULT_DATA_DIR = Path.home() / ".blendios"
+DEFAULT_DB_PATH = DEFAULT_DATA_DIR / "system" / "blendios.db"
+DEFAULT_VFS_PATH = DEFAULT_DATA_DIR / "vfs"
+DEFAULT_PLUGINS_PATH = DEFAULT_DATA_DIR / "plugins"
+DEFAULT_LOG_PATH = DEFAULT_DATA_DIR / "system" / "logs"
+
+# Security
+DEFAULT_BCRYPT_ROUNDS = 12
+DEFAULT_ACCESS_TOKEN_TTL_MINUTES = 60
+DEFAULT_REFRESH_TOKEN_TTL_DAYS = 7
+DEFAULT_MAX_FAILED_LOGINS = 5
+DEFAULT_LOCKOUT_MINUTES = 15
+
+# Kernel simulation
+DEFAULT_TOTAL_RAM_MB = 4096
+DEFAULT_SCHEDULER = "round_robin"
+DEFAULT_ROUND_ROBIN_QUANTUM_MS = 100
+
+# API
+API_PREFIX = "/api/v1"
+
+# Roles
+ROLE_ADMIN = "admin"
+ROLE_USER = "user"
+ROLE_GUEST = "guest"
+ROLES = {ROLE_ADMIN, ROLE_USER, ROLE_GUEST}
+
+# Process statuses
+PROCESS_RUNNING = "running"
+PROCESS_SLEEPING = "sleeping"
+PROCESS_STOPPED = "stopped"
+PROCESS_TERMINATED = "terminated"
+PROCESS_CRASHED = "crashed"

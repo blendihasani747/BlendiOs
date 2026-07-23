@@ -1,0 +1,1 @@
+"""Desktop environment package."""
